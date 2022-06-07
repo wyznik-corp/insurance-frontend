@@ -21,14 +21,14 @@ ingress:
      kubernetes.io/tls-acme: "true"
      cert-manager.io/cluster-issuer: staging-issuer
   hosts:
-    - host: REPLACE_GITHUB_ORG.staging.workshop.cb-sa.io
+    - host: wyznik-corp.staging.workshop.cb-sa.io
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - secretName: staging-tls
       hosts:
-        - REPLACE_GITHUB_ORG.staging.workshop.cb-sa.io
+        - wyznik-corp.staging.workshop.cb-sa.io
 
 backendUrl: https://example.com
 fmToken: abcdefg123456789
