@@ -1,0 +1,19 @@
+kind: Pod
+metadata:
+  name: nodejs-app
+spec:
+  containers:
+  - name: nodejs
+    image: us-east1-docker.pkg.dev/core-workshop/workshop-registry/node:17-alpine
+    command:
+    - sleep
+    args:
+    - 99d
+  - name: testcafe
+    image: us-east1-docker.pkg.dev/core-workshop/workshop-registry/testcafe:1.18.0
+    command:
+    - sleep
+    args:
+    - 99d
+  securityContext:
+    runAsUser: 1000
